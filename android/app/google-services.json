@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "448893752520",
+    "firebase_url": "https://zara-shop-d7f04-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "zara-shop-d7f04",
+    "storage_bucket": "zara-shop-d7f04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448893752520:android:754cf03d3a2b190c3101fd",
+        "android_client_info": {
+          "package_name": "com.example.setterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448893752520-farh6rmor9m9g6i73lu64krd54dq9vjq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.setterapp",
+            "certificate_hash": "cf1fd2b968633fbdba5be70e01eccb25ba9d655a"
+          }
+        },
+        {
+          "client_id": "448893752520-3kj86hsl4p8ih4qj1qfcsgc1060r019m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALR3nZqxW7pm86nebBBEWp17Q1nmWsFyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "448893752520-3kj86hsl4p8ih4qj1qfcsgc1060r019m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448893752520:android:0cfbb1282cbc68cb3101fd",
+        "android_client_info": {
+          "package_name": "com.hakimbek.zarashopadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448893752520-3kj86hsl4p8ih4qj1qfcsgc1060r019m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALR3nZqxW7pm86nebBBEWp17Q1nmWsFyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "448893752520-3kj86hsl4p8ih4qj1qfcsgc1060r019m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448893752520:android:7e4e4872e4646eb43101fd",
+        "android_client_info": {
+          "package_name": "com.shakhriyor.zarashop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448893752520-c4tsj38m54r5ms4brnmgv8l86pjk75hl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shakhriyor.zarashop",
+            "certificate_hash": "cf1fd2b968633fbdba5be70e01eccb25ba9d655a"
+          }
+        },
+        {
+          "client_id": "448893752520-3kj86hsl4p8ih4qj1qfcsgc1060r019m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALR3nZqxW7pm86nebBBEWp17Q1nmWsFyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "448893752520-3kj86hsl4p8ih4qj1qfcsgc1060r019m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
