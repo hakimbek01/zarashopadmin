@@ -6,7 +6,7 @@ import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
 import '../model/orders_model.dart';
 import '../service/data_service.dart';
-import 'check_image_page.dart';
+import 'image_visiable_page.dart';
 
 class OrdersDataPage extends StatefulWidget {
   final Orders? orders;
@@ -96,7 +96,7 @@ class _OrdersDataPageState extends State<OrdersDataPage> {
                             color: Colors.blue,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                             onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => CheckImagePage(url: orders!.checkImage),));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => ImagePage(url: orders!.checkImage),));
                             },
                             child: Text("Chekni ko'rish",style: TextStyle(color: Colors.white),),
                           ),

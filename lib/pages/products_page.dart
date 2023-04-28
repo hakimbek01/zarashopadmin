@@ -2,20 +2,17 @@ import 'dart:async';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:card_swiper/card_swiper.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:zarashopadmin/pages/category_page.dart';
 import 'package:zarashopadmin/pages/search_page.dart';
-import 'package:zarashopadmin/pages/searchinfo_page.dart';
 import 'package:zarashopadmin/pages/update_page.dart';
-
 import '../model/admin_model.dart';
 import '../model/my_work.dart';
 import '../model/product_model.dart';
 import '../service/data_service.dart';
 import '../service/utils_service.dart';
-import 'create_page.dart';
+import 'category_page.dart';
+
 
 class ProductsPage extends StatefulWidget {
   const ProductsPage({Key? key}) : super(key: key);
@@ -52,6 +49,7 @@ class _ProductsPageState extends State<ProductsPage> {
     return Stack(
       children: [
         Scaffold(
+          backgroundColor: Colors.white,
           appBar: AppBar(
             iconTheme: const IconThemeData(
                 color: Colors.black54
@@ -93,7 +91,6 @@ class _ProductsPageState extends State<ProductsPage> {
                 const Icon(CupertinoIcons.chevron_down,)
               ],
             ),
-
             actions: [
               visiableProduct && !removeVisiable?
               GestureDetector(
@@ -113,14 +110,8 @@ class _ProductsPageState extends State<ProductsPage> {
                     Container(
                       padding: const EdgeInsets.all(10),
                       child: isSeries?
-                      const Image(
-                        height: 30,
-                        image: AssetImage('assets/buttons/series_2.png'),
-                      ):
-                      const Image(
-                        height: 30,
-                        image: AssetImage('assets/buttons/series_1.png'),
-                      ),
+                      const Icon(CupertinoIcons.decrease_indent,size: 30,):
+                      const Icon(CupertinoIcons.doc_append,size: 30,),
                     )
                   ],
                 ),
@@ -227,19 +218,6 @@ class _ProductsPageState extends State<ProductsPage> {
 
                 ],
               ),
-            ),
-          ),
-          floatingActionButton: MaterialButton(
-            padding: EdgeInsets.zero,
-            minWidth: 0,
-            onPressed: () async {
-              await Navigator.push(context, CupertinoPageRoute(builder: (context) => const CreatePage(),));
-              // getCategory();
-              // getProducts(false);
-            },
-            child: const Image(
-              height: 47,
-              image: AssetImage('assets/buttons/add.png'),
             ),
           ),
         ),
@@ -462,11 +440,11 @@ class _ProductsPageState extends State<ProductsPage> {
       },
       onTap: () async{
         removeCategory = await Navigator.push(context, CupertinoPageRoute(builder: (context) => UpdatePage(product: product),));
-        // getCategory();
       },
       child: isSeries?
-      // 2 qator bo'lib chiqishi
+      // 2 qator  bo'lib chiqishi
       Container(
+        color: Colors.white,
         margin: const EdgeInsets.only(left: 10,right: 10,bottom: 5),
         width: double.infinity,
         child: Stack(

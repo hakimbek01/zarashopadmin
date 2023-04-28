@@ -1,9 +1,11 @@
 import 'dart:io';
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:zarashopadmin/pages/select_types.dart';
+
 import '../model/admin_model.dart';
 import '../model/my_work.dart';
 import '../model/product_model.dart';
@@ -258,24 +260,44 @@ class _CreatePageState extends State<CreatePage> {
                     child: Column(
                       children: [
                         //product name
-                        TextField(
-                          controller: _name,
-                          decoration: InputDecoration(
-                              fillColor: Colors.grey.shade200,
-                              filled: true,
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(color: Colors.grey.shade300,offset: Offset(1,-1),blurRadius: 1),
+                                BoxShadow(color: Colors.grey.shade300,offset: Offset(1,.51),blurRadius: 1)
+                            ]
+                          ),
+                          child: TextField(
+                            controller: _name,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
                               label: const Text("Name")
+                            ),
                           ),
                         ),
                         const SizedBox(height: 10,),
                         //product content,
-                        TextField(
-                          controller: _content,
-                          maxLines: 10,
-                          minLines: 1,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.grey.shade200,
-                              label: const Text("Description")
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(color: Colors.grey.shade300,offset: Offset(1,-1),blurRadius: 1),
+                                BoxShadow(color: Colors.grey.shade300,offset: Offset(1,.51),blurRadius: 1)
+                              ]
+                          ),
+                          child: TextField(
+                            controller: _content,
+                            maxLines: 10,
+                            minLines: 1,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                                label: const Text("Description")
+                            ),
                           ),
                         ),
 
@@ -303,19 +325,19 @@ class _CreatePageState extends State<CreatePage> {
                     ),
                   ),
                   const SizedBox(height: 20,),
-                  //send
+                  //create
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: MaterialButton(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5),side: const BorderSide(color: Colors.black,width: 1)),
-                      minWidth: 170,
-                      onPressed: (){
-                        addProduct();
-                      },
-                      child: const Icon(Icons.send,),
+                      color: Colors.blue,
+                      minWidth: MediaQuery.of(context).size.width-20,
+                      height: 38,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      onPressed: () => addProduct(),
+                      child: Icon(CupertinoIcons.rocket_fill,color: Colors.white,size: 30,),
                     ),
                   ),
+                  SizedBox(height: 50,)
                 ],
               ),
             ),

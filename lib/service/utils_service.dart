@@ -16,7 +16,7 @@ class Utils {
     return await showDialog(
       context: context,
       builder: (context) {
-        return Platform.isAndroid ?
+        return !Platform.isAndroid ?
         AlertDialog(
           title: Text(title),
           content: Text(content),
@@ -56,6 +56,7 @@ class Utils {
       },
     );
   }
+
 
   static fToast(String message) {
     Fluttertoast.showToast(

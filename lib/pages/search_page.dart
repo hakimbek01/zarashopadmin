@@ -1,13 +1,14 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zarashopadmin/pages/update_page.dart';
-
 import '../model/product_model.dart';
 
 
 class SearchPage extends StatefulWidget {
-  const SearchPage({Key? key}) : super(key: key);
+  final bool? types;
+  const SearchPage({Key? key, this.types}) : super(key: key);
 
   @override
   State<SearchPage> createState() => _SearchPageState();
@@ -24,9 +25,12 @@ class _SearchPageState extends State<SearchPage> {
 
   @override
   void initState()  {
-    start();
+    if (widget.types!) {
+      start();
+    }
     super.initState();
   }
+
 
   void start() async {
     await Future.delayed(Duration(milliseconds: 10));
@@ -43,6 +47,7 @@ class _SearchPageState extends State<SearchPage> {
       body: SafeArea(
         child: Column(
           children: [
+            widget.types!?
             Align(
               alignment: Alignment.topRight,
               child: Row(
@@ -85,6 +90,37 @@ class _SearchPageState extends State<SearchPage> {
                   )
                 ],
               ),
+            ):
+            Align(
+              alignment: Alignment.topRight,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                height: 40,
+                width: MediaQuery.of(context).size.width-10,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(7),
+                    boxShadow: [
+                      BoxShadow(blurRadius: 1,color: Colors.grey.shade400,offset: Offset(0,0),)
+                    ]
+                ),
+                child: Center(
+                  child: TextField(
+                    onChanged: (value) {
+                      setState(() {
+                        searchStart=value;
+                        searchEnd=value;
+                      });
+                    },
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Search",
+                      hintStyle: TextStyle(color: Colors.black45)
+                    ),
+                  ),
+                ),
+              ),
             ),
             Expanded(
               child: StreamBuilder<QuerySnapshot>(
@@ -109,6 +145,7 @@ class _SearchPageState extends State<SearchPage> {
                       ) {
                         return InkWell(
                           onTap: () {
+                            print(data);
                             Navigator.push(context, CupertinoPageRoute(builder: (context) => UpdatePage(product: Product.fromJson(data)),));
                           },
                           child: Container(
@@ -128,11 +165,12 @@ class _SearchPageState extends State<SearchPage> {
                                       ]
                                   ),
                                   clipBehavior: Clip.hardEdge,
-                                  child: Image(
+                                  child: CachedNetworkImage(
+                                    errorWidget: (context, url, error) => Center(child: Icon(Icons.highlight_remove,color: Colors.red,),),
                                     height: 60,
                                     width: 70,
                                     fit: BoxFit.cover,
-                                    image: NetworkImage(data["imgUrls"][0]),
+                                    imageUrl: data['imgUrls'][0],
                                   ),
                                 ),
                                 SizedBox(width: 10,),

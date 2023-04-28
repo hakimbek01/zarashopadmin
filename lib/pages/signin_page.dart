@@ -1,11 +1,8 @@
 import 'dart:async';
-
 import 'package:flip_card/flip_card.dart';
 import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:zarashopadmin/pages/signup_page.dart';
-
-
 import '../service/auth_service.dart';
 import 'home_page.dart';
 

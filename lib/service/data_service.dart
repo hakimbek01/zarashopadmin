@@ -51,7 +51,7 @@ class DataService {
   }
 
 
-  /// products
+  /// product
   static Future<String?> addProduct(Product product) async {
     var doc = _firestore.collection(folderProduct).doc();
     product.id = doc.id;

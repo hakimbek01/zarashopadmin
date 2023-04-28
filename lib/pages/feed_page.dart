@@ -125,7 +125,7 @@ class _FeedPageState extends State<FeedPage> {
                 //search
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, CupertinoPageRoute(builder: (context) => SearchPage(),));
+                    Navigator.push(context, CupertinoPageRoute(builder: (context) => SearchPage(types: true),));
                   },
                   child: Container(
                     width: double.infinity,

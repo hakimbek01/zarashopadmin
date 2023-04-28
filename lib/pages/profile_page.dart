@@ -1,8 +1,6 @@
-import 'dart:io';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:zarashopadmin/pages/signin_page.dart';
 import '../model/admin_model.dart';
 import '../service/auth_service.dart';

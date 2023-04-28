@@ -74,9 +74,9 @@ class _SelectTypesPageState extends State<SelectTypesPage> {
         child: Column(
           children: [
             widget.imgFILE!=null?
-            Image.file(widget.imgFILE!, height: 200, width: double.infinity, fit: BoxFit.cover):
+            Image.file(widget.imgFILE!, height: 400, width: double.infinity, fit: BoxFit.cover):
             CachedNetworkImage(
-              height: 200,
+              height: 400,
               width: double.infinity,
               fit: BoxFit.cover,
               imageUrl: widget.imgURL!

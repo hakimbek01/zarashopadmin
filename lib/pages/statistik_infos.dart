@@ -2,11 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:zarashopadmin/pages/searchinfo_page.dart';
-
-import '../model/product_model.dart';
 import '../service/data_service.dart';
 import '../service/utils_service.dart';
-import 'feed_page.dart';
+
 
 class StatistikInfoPage extends StatefulWidget {
   const StatistikInfoPage({Key? key}) : super(key: key);
@@ -42,6 +40,7 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
     return Stack(
       children: [
         Scaffold(
+          backgroundColor: Colors.white,
           appBar: AppBar(
               backgroundColor: Colors.white,
               iconTheme: IconThemeData(color: Colors.black),
@@ -115,6 +114,7 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
                     color: Colors.blueAccent),
                 SizedBox(height: 10,),
                 Container(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
                   margin: EdgeInsets.only(bottom: 20),
                   child: Column(
                     children: productInfo.map((e) {
@@ -128,7 +128,6 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
         ),
         isLoading?
         Scaffold(
-          backgroundColor: Colors.grey.withOpacity(.3),
           body: Center(
             child: CupertinoActivityIndicator(),
           ),
@@ -211,6 +210,11 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
     ):
     Container(
       margin: EdgeInsets.only(bottom: 7,left: 7,right: 7),
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(color: Colors.grey.withOpacity(.5),offset: Offset(0,0),blurRadius: 1)
+        ]
+      ),
       child: MaterialButton(
         onPressed: (){
           Navigator.push(context, CupertinoPageRoute(builder: (context) => SearchInfoPage(categoryName: visiableProductInfo.category),));
@@ -218,7 +222,7 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
         padding: EdgeInsets.symmetric(horizontal: 10),
         minWidth: MediaQuery.of(context).size.width-9,
         height: MediaQuery.of(context).size.width / 6.5,
-        color: Color.fromRGBO(231, 230, 230, 1.0),
+        color: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
         child: Row(
           children: [

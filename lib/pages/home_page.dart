@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zarashopadmin/pages/products_page.dart';
+import 'package:zarashopadmin/pages/search_page.dart';
 
+
+
+import 'create_page.dart';
 import 'feed_page.dart';
 import 'orders_view_page.dart';
 
@@ -18,6 +22,36 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    return CupertinoTabScaffold(
+      tabBar: CupertinoTabBar(
+        backgroundColor: Colors.white.withOpacity(.3),
+        items: [
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.home),label: "Home"),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.search),label: "Search"),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.add_circled),label: "",),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.shopping_cart),label: "Products"),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.arrow_down_right_square),label: "Orders"),
+        ],
+      ),
+      tabBuilder: (context, index) {
+        switch(index) {
+          case 0:
+            return FeedPage();
+          case 1:
+            return SearchPage(types: false,);
+          case 2:
+            return CreatePage();
+          case 3:
+            return ProductsPage();
+          case 4:
+            return OrdersPage();
+        }
+        return SizedBox();
+      },
+    );
+  }
+
+  Widget a(context,) {
     return Scaffold(
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
@@ -130,7 +164,6 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
 
 
 }
