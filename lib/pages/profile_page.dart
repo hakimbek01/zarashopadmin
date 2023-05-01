@@ -66,7 +66,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   void logout() async {
     await AuthService.signOut();
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignInPage(),));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignInPage(),));
   }
 
   @override
@@ -82,12 +82,12 @@ class _ProfilePageState extends State<ProfilePage> {
         Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(
-            iconTheme: IconThemeData(
+            iconTheme: const IconThemeData(
               color: Colors.black
             ),
             elevation: 0,
             backgroundColor: Colors.white,
-            title: Text("Profile",style: TextStyle(fontSize: 25,fontFamily: "Aladin",color: Colors.black),),
+            title: const Text("Profile",style: TextStyle(fontSize: 25,fontFamily: "Aladin",color: Colors.black),),
             actions: [
               IconButton(
                 onPressed: () {
@@ -121,36 +121,36 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   ).show();
                 },
-                icon: Icon(Icons.edit),
+                icon: const Icon(Icons.edit),
               ),
               IconButton(
                 onPressed: () {
                   logout();
                 },
-                icon: Icon(Icons.logout),
+                icon: const Icon(Icons.logout),
               ),
             ],
           ),
           body: SingleChildScrollView(
             child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   children: [
                     Align(
                       alignment: Alignment.topCenter,
-                      child: Text(name,style: TextStyle(color: Colors.black54,fontSize: 18,fontWeight: FontWeight.w500),),
+                      child: Text(name,style: const TextStyle(color: Colors.black54,fontSize: 18,fontWeight: FontWeight.w500),),
                     ),
-                    SizedBox(height: 7,),
+                    const SizedBox(height: 7,),
                     Row(
                       children: [
                         Expanded(
                           child: Container(
-                            padding: EdgeInsets.all(7),
+                            padding: const EdgeInsets.all(7),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.grey.shade100,
-                                gradient: LinearGradient(
+                                gradient: const LinearGradient(
                                     begin: Alignment.bottomLeft,
                                     end: Alignment.topRight,
                                     colors: [
@@ -159,17 +159,17 @@ class _ProfilePageState extends State<ProfilePage> {
                                     ]
                                 )
                             ),
-                            child: Text("Joylashtirgan mahsulotlarim: ${myCreateP.length}",style: TextStyle(color: Colors.black54),),
+                            child: Text("Joylashtirgan mahsulotlarim: ${myCreateP.length}",style: const TextStyle(color: Colors.black54),),
                           ),
                         ),
-                        SizedBox(width: 10,),
+                        const SizedBox(width: 10,),
                         Expanded(
                           child: Container(
-                            padding: EdgeInsets.all(7),
+                            padding: const EdgeInsets.all(7),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.grey.shade100,
-                                gradient: LinearGradient(
+                                gradient: const LinearGradient(
                                     begin: Alignment.bottomLeft,
                                     end: Alignment.topRight,
                                     colors: [
@@ -178,7 +178,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     ]
                                 )
                             ),
-                            child: Text("Tahrirlagan mahsulotlarim: ${myUpdateP.length}",style: TextStyle(color: Colors.black54),),
+                            child: Text("Tahrirlagan mahsulotlarim: ${myUpdateP.length}",style: const TextStyle(color: Colors.black54),),
                           ),
                         ),
                       ],
@@ -191,11 +191,11 @@ class _ProfilePageState extends State<ProfilePage> {
         isLoading?
         Scaffold(
           backgroundColor: Colors.grey.withOpacity(.2),
-          body: Center(
+          body: const Center(
             child: CircularProgressIndicator(),
           ),
         ):
-        SizedBox()
+        const SizedBox()
       ],
     );
   }

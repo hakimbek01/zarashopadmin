@@ -96,9 +96,9 @@ class _CreatePageState extends State<CreatePage> {
                 Container(color: Colors.blue, width: double.infinity, height: 1),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text("Category qo'shish",style: TextStyle(fontWeight: FontWeight.w700),),
-                    const Icon(Icons.add)
+                  children: const [
+                    Text("Category qo'shish",style: TextStyle(fontWeight: FontWeight.w700),),
+                    Icon(Icons.add)
                   ],
                 )
               ],
@@ -204,7 +204,7 @@ class _CreatePageState extends State<CreatePage> {
                                     List<Map<String, dynamic>> response = [];
                                     a = await Navigator.push(context, MaterialPageRoute(builder: (context) => SelectTypesPage(imgFILE: e['img'],types: e,)));
                                   } else {
-                                    a = await Navigator.push(context, MaterialPageRoute(builder: (context) => SelectTypesPage(imgFILE: e['img'],types: {},)));
+                                    a = await Navigator.push(context, MaterialPageRoute(builder: (context) => SelectTypesPage(imgFILE: e['img'],types: const {},)));
                                   }
 
                                   if (a!=null) {
@@ -261,42 +261,42 @@ class _CreatePageState extends State<CreatePage> {
                       children: [
                         //product name
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
                               boxShadow: [
-                                BoxShadow(color: Colors.grey.shade300,offset: Offset(1,-1),blurRadius: 1),
-                                BoxShadow(color: Colors.grey.shade300,offset: Offset(1,.51),blurRadius: 1)
+                                BoxShadow(color: Colors.grey.shade300,offset: const Offset(1,-1),blurRadius: 1),
+                                BoxShadow(color: Colors.grey.shade300,offset: const Offset(1,.51),blurRadius: 1)
                             ]
                           ),
                           child: TextField(
                             controller: _name,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               border: InputBorder.none,
-                              label: const Text("Name")
+                              label: Text("Name")
                             ),
                           ),
                         ),
                         const SizedBox(height: 10,),
                         //product content,
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
                               boxShadow: [
-                                BoxShadow(color: Colors.grey.shade300,offset: Offset(1,-1),blurRadius: 1),
-                                BoxShadow(color: Colors.grey.shade300,offset: Offset(1,.51),blurRadius: 1)
+                                BoxShadow(color: Colors.grey.shade300,offset: const Offset(1,-1),blurRadius: 1),
+                                BoxShadow(color: Colors.grey.shade300,offset: const Offset(1,.51),blurRadius: 1)
                               ]
                           ),
                           child: TextField(
                             controller: _content,
                             maxLines: 10,
                             minLines: 1,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               border: InputBorder.none,
-                                label: const Text("Description")
+                                label: Text("Description")
                             ),
                           ),
                         ),
@@ -334,10 +334,10 @@ class _CreatePageState extends State<CreatePage> {
                       height: 38,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                       onPressed: () => addProduct(),
-                      child: Icon(CupertinoIcons.rocket_fill,color: Colors.white,size: 30,),
+                      child: const Icon(CupertinoIcons.rocket_fill,color: Colors.white,size: 30,),
                     ),
                   ),
-                  SizedBox(height: 50,)
+                  const SizedBox(height: 50,)
                 ],
               ),
             ),

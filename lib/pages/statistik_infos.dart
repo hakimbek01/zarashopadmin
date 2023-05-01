@@ -43,8 +43,8 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
           backgroundColor: Colors.white,
           appBar: AppBar(
               backgroundColor: Colors.white,
-              iconTheme: IconThemeData(color: Colors.black),
-              title: Text("Statistik ma'lumotlar",style: TextStyle(color: Colors.black,fontFamily: "Aladin",fontSize: 25),),
+              iconTheme: const IconThemeData(color: Colors.black),
+              title: const Text("Statistik ma'lumotlar",style: TextStyle(color: Colors.black,fontFamily: "Aladin",fontSize: 25),),
               actions: [
                 InkWell(
                   onTap: () {
@@ -53,10 +53,10 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
                     });
                   },
                   child: Padding(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     child: sfChartType?
-                    Icon(CupertinoIcons.chart_bar,color: Colors.blue,):
-                    Icon(CupertinoIcons.chart_pie,color: Colors.blue,)
+                    const Icon(CupertinoIcons.chart_bar,color: Colors.blue,):
+                    const Icon(CupertinoIcons.chart_pie,color: Colors.blue,)
                   ),
                 )
               ]
@@ -64,7 +64,7 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
           body: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
@@ -82,7 +82,7 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
                         dataSource: statistikaList,
                         xValueMapper: (datum, index) => statistikaList[index].category,
                         yValueMapper: (datum, index) => statistikaList[index].buyCount,
-                        dataLabelSettings: DataLabelSettings(
+                        dataLabelSettings: const DataLabelSettings(
                           isVisible: true,
                         ),
                         enableTooltip: true,
@@ -110,12 +110,12 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
                 ),
                 Container(
                     height: 2,
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                     color: Colors.blueAccent),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 5),
-                  margin: EdgeInsets.only(bottom: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  margin: const EdgeInsets.only(bottom: 20),
                   child: Column(
                     children: productInfo.map((e) {
                       return itemOfProducts(e);
@@ -127,12 +127,12 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
           ),
         ),
         isLoading?
-        Scaffold(
+        const Scaffold(
           body: Center(
             child: CupertinoActivityIndicator(),
           ),
         ):
-        SizedBox()
+        const SizedBox()
       ],
     );
   }
@@ -140,7 +140,7 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
   Widget itemOfProducts(VisiableProductMoreBuy visiableProductInfo) {
     return visiableProductInfo.isMoreBuy?
     Container(
-      margin: EdgeInsets.only(bottom: 7,right: 7,left: 7),
+      margin: const EdgeInsets.only(bottom: 7,right: 7,left: 7),
       child: MaterialButton(
         onPressed: (){
           Navigator.push(context, CupertinoPageRoute(builder: (context) => SearchInfoPage(categoryName: visiableProductInfo.category),));
@@ -151,7 +151,7 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
         clipBehavior: Clip.hardEdge,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           width: MediaQuery.of(context).size.width-9,
           height: MediaQuery.of(context).size.width / 6.5,
           decoration: BoxDecoration(
@@ -172,7 +172,7 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
                     alignment: Alignment.center,
                     child: Text(
                       visiableProductInfo.category!,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.black54,
                           fontSize: 15,
                           fontWeight: FontWeight.bold),
@@ -184,16 +184,16 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
                   alignment: Alignment.center,
                   child: Text(
                     "${visiableProductInfo.buyCount} ta",
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.black54,
                         fontSize: 15,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(5),
+                  padding: EdgeInsets.all(5),
                   child: Align(
                     alignment: Alignment.topRight,
                     child: Image(
@@ -209,17 +209,17 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
       ),
     ):
     Container(
-      margin: EdgeInsets.only(bottom: 7,left: 7,right: 7),
+      margin: const EdgeInsets.only(bottom: 7,left: 7,right: 7),
       decoration: BoxDecoration(
         boxShadow: [
-          BoxShadow(color: Colors.grey.withOpacity(.5),offset: Offset(0,0),blurRadius: 1)
+          BoxShadow(color: Colors.grey.withOpacity(.5),offset: const Offset(0,0),blurRadius: 1)
         ]
       ),
       child: MaterialButton(
         onPressed: (){
           Navigator.push(context, CupertinoPageRoute(builder: (context) => SearchInfoPage(categoryName: visiableProductInfo.category),));
         },
-        padding: EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         minWidth: MediaQuery.of(context).size.width-9,
         height: MediaQuery.of(context).size.width / 6.5,
         color: Colors.white,
@@ -231,7 +231,7 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
                   alignment: Alignment.center,
                   child: Text(
                     visiableProductInfo.category!,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.black54,
                         fontSize: 15,
                         fontWeight: FontWeight.bold),
@@ -242,14 +242,14 @@ class _StatistikInfoPageState extends State<StatistikInfoPage> {
                 alignment: Alignment.center,
                 child: Text(
                   "${visiableProductInfo.buyCount} ta",
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.black54,
                       fontSize: 15,
                       fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-            Expanded(
+            const Expanded(
               child: SizedBox(),
             ),
           ],

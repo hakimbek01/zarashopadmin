@@ -47,7 +47,7 @@ class _SignUpPageState extends State<SignUpPage> {
         if (value!=null) {
           register(value.uid),
           _flipController!.toggleCard(),
-          timer=Timer.periodic(Duration(milliseconds: 900), (timer) {
+          timer=Timer.periodic(const Duration(milliseconds: 900), (timer) {
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(),));
             timer.cancel();
           }),
@@ -86,7 +86,7 @@ class _SignUpPageState extends State<SignUpPage> {
           body: SingleChildScrollView(
             child: Container(
               width: MediaQuery.of(context).size.width,
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               child: Column(
                 children: [
                   Container(
@@ -98,18 +98,18 @@ class _SignUpPageState extends State<SignUpPage> {
                           flipOnTouch: false,
                           front: Image(
                             height: MediaQuery.of(context).size.width-130,
-                            image: AssetImage("assets/images/signup.png"),
+                            image: const AssetImage("assets/images/signup.png"),
                           ),
                           back: Image(
                             height: MediaQuery.of(context).size.width-200,
-                            image: AssetImage("assets/images/ok.png"),
+                            image: const AssetImage("assets/images/ok.png"),
                           ),
                         ),
-                        SizedBox(height: 20,),
+                        const SizedBox(height: 20,),
                         //name
                         Container(
                           height: 45,
-                          padding: EdgeInsets.symmetric(horizontal: 5),
+                          padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(7),
                               border: Border.all(width: .5,color: Colors.purpleAccent)
@@ -123,11 +123,11 @@ class _SignUpPageState extends State<SignUpPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         //email
                         Container(
                           height: 45,
-                          padding: EdgeInsets.symmetric(horizontal: 5),
+                          padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(7),
                               border: Border.all(width: .5,color: Colors.purpleAccent)
@@ -141,11 +141,11 @@ class _SignUpPageState extends State<SignUpPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         //password
                         Container(
                           height: 45,
-                          padding: EdgeInsets.symmetric(horizontal: 5),
+                          padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(7),
                               border: Border.all(width: .5,color: Colors.purpleAccent)
@@ -159,11 +159,11 @@ class _SignUpPageState extends State<SignUpPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         //confirm password
                         Container(
                           height: 45,
-                          padding: EdgeInsets.symmetric(horizontal: 5),
+                          padding: const EdgeInsets.symmetric(horizontal: 5),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(7),
                               border: Border.all(width: .5,color: Colors.purpleAccent)
@@ -177,23 +177,23 @@ class _SignUpPageState extends State<SignUpPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         MaterialButton(
                           height: 45,
                           minWidth: double.infinity,
                           onPressed: (){
                             doSignUp();
                           },
-                          shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(10),side: BorderSide(color: Colors.purpleAccent,width: 1)),
+                          shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(10),side: const BorderSide(color: Colors.purpleAccent,width: 1)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text("Sign Up",style: TextStyle(fontSize: 18,fontFamily: "Aladin"),),
-                              Icon(Icons.chevron_right)
+                              const Text("Sign Up",style: TextStyle(fontSize: 18,fontFamily: "Aladin"),),
+                              const Icon(Icons.chevron_right)
                             ],
                           ),
                         ),
-                        SizedBox(height: 30,),
+                        const SizedBox(height: 30,),
                       ],
                     ),
                   ),
@@ -202,13 +202,13 @@ class _SignUpPageState extends State<SignUpPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Huquqlar himoya qilingan"),
-                        SizedBox(width: 10,),
+                        const Text("Huquqlar himoya qilingan"),
+                        const SizedBox(width: 10,),
                         TextButton(
                           onPressed: (){
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignInPage(),));
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignInPage(),));
                           },
-                          child: Text("Sign In",style: TextStyle(color: Colors.black,fontFamily: "Aladin",fontSize: 17),),
+                          child: const Text("Sign In",style: TextStyle(color: Colors.black,fontFamily: "Aladin",fontSize: 17),),
                         )
                       ],
                     ),
@@ -219,13 +219,13 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
         ),
         isLoading?
-        Scaffold(
+        const Scaffold(
           backgroundColor: Colors.transparent,
           body: Center(
             child: CircularProgressIndicator(),
           ),
         ):
-        SizedBox()
+        const SizedBox()
       ],
     );
   }

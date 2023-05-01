@@ -67,7 +67,7 @@ class _SelectTypesPageState extends State<SelectTypesPage> {
           onPressed: (){
               Navigator.pop(context, widget.types!["types"]);
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: SingleChildScrollView(
@@ -89,14 +89,14 @@ class _SelectTypesPageState extends State<SelectTypesPage> {
                 return itemOfSizeAndPrice(index,sizeControllers[index], priceControllers[index]);
               },
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Center(
               child: FloatingActionButton(
                   onPressed: addItem,
-                  child: Icon(Icons.add)
+                  child: const Icon(Icons.add)
               ),
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
           ],
         ),
       ),
@@ -151,7 +151,7 @@ class _SelectTypesPageState extends State<SelectTypesPage> {
         children: [
           Expanded(
             child: Padding(
-              padding: EdgeInsets.only(top: 10),
+              padding: const EdgeInsets.only(top: 10),
               child: TextField(
                 controller: sizeController,
                 decoration:  InputDecoration(
@@ -161,11 +161,11 @@ class _SelectTypesPageState extends State<SelectTypesPage> {
                   ),
                   focusedBorder:  OutlineInputBorder(
                     borderRadius: BorderRadius.circular(13),
-                    borderSide: BorderSide(color: Colors.blue,width: 1),
+                    borderSide: const BorderSide(color: Colors.blue,width: 1),
                   ),
                   border: InputBorder.none,
                   filled: true,
-                  label: Text("Size"),
+                  label: const Text("Size"),
                 ),
               ),
             ),
@@ -173,9 +173,9 @@ class _SelectTypesPageState extends State<SelectTypesPage> {
           const SizedBox(width: 5,),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.only(top: 10),
+              padding: const EdgeInsets.only(top: 10),
               child: TextField(
-                keyboardType: TextInputType.numberWithOptions(),
+                keyboardType: const TextInputType.numberWithOptions(),
                 controller: priceController,
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
@@ -184,11 +184,11 @@ class _SelectTypesPageState extends State<SelectTypesPage> {
                   ),
                   focusedBorder:  OutlineInputBorder(
                     borderRadius: BorderRadius.circular(13),
-                    borderSide: BorderSide(color: Colors.blue,width: 1),
+                    borderSide: const BorderSide(color: Colors.blue,width: 1),
                   ),
                   border: InputBorder.none,
                   filled: true,
-                  label: Text("Price"),
+                  label: const Text("Price"),
                 ),
               ),
             ),

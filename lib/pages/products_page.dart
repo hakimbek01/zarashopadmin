@@ -371,18 +371,18 @@ class _ProductsPageState extends State<ProductsPage> {
                       placeholder: (context, url) => Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const CircularProgressIndicator(),
-                            const Text("Yuklnamoqda...",style: TextStyle(fontSize: 12),)
+                          children: const [
+                            CircularProgressIndicator(),
+                            Text("Yuklnamoqda...",style: TextStyle(fontSize: 12),)
                           ],
                         ),
                       ),
                       errorWidget: (context, url, error) => Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Icon(Icons.highlight_remove,color: Colors.red,),
-                            const Text("Xatolik yuz berdi!",style: TextStyle(fontSize: 12),)
+                          children: const [
+                            Icon(Icons.highlight_remove,color: Colors.red,),
+                            Text("Xatolik yuz berdi!",style: TextStyle(fontSize: 12),)
                           ],
                         ),
                       ),
@@ -528,18 +528,18 @@ class _ProductsPageState extends State<ProductsPage> {
                     placeholder: (context, url) => Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const CircularProgressIndicator(),
-                          const Text("Yuklnamoqda...",style: TextStyle(fontSize: 12),)
+                        children: const [
+                          CircularProgressIndicator(),
+                          Text("Yuklnamoqda...",style: TextStyle(fontSize: 12),)
                         ],
                       ),
                     ),
                     errorWidget: (context, url, error) => Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(Icons.highlight_remove,color: Colors.red,),
-                          const Text("Xatolik yuz berdi!",style: TextStyle(fontSize: 12),)
+                        children: const [
+                          Icon(Icons.highlight_remove,color: Colors.red,),
+                          Text("Xatolik yuz berdi!",style: TextStyle(fontSize: 12),)
                         ],
                       ),
                     ),

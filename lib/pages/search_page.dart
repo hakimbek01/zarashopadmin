@@ -33,7 +33,7 @@ class _SearchPageState extends State<SearchPage> {
 
 
   void start() async {
-    await Future.delayed(Duration(milliseconds: 10));
+    await Future.delayed(const Duration(milliseconds: 10));
     setState(() {
       searchAnimation = true;
     });
@@ -57,19 +57,19 @@ class _SearchPageState extends State<SearchPage> {
                     onPressed: (){
                       Navigator.pop(context);
                     },
-                    icon: Icon(Icons.close),
+                    icon: const Icon(Icons.close),
                   ),
                   AnimatedContainer(
-                    duration: Duration(milliseconds: 300),
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    margin: EdgeInsets.only(right: 10),
+                    duration: const Duration(milliseconds: 300),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    margin: const EdgeInsets.only(right: 10),
                     height: 40,
                     width: searchAnimation?MediaQuery.of(context).size.width-60:10,
                     curve: Curves.easeIn,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(25),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(blurRadius: 2,color: Colors.grey,offset: Offset(0,0),)
                         ]
                     ),
@@ -81,7 +81,7 @@ class _SearchPageState extends State<SearchPage> {
                             searchEnd=value;
                           });
                         },
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             border: InputBorder.none,
                             hintText: "Search"
                         ),
@@ -94,15 +94,15 @@ class _SearchPageState extends State<SearchPage> {
             Align(
               alignment: Alignment.topRight,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
                 height: 40,
                 width: MediaQuery.of(context).size.width-10,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(7),
                     boxShadow: [
-                      BoxShadow(blurRadius: 1,color: Colors.grey.shade400,offset: Offset(0,0),)
+                      BoxShadow(blurRadius: 1,color: Colors.grey.shade400,offset: const Offset(0,0),)
                     ]
                 ),
                 child: Center(
@@ -113,7 +113,7 @@ class _SearchPageState extends State<SearchPage> {
                         searchEnd=value;
                       });
                     },
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: "Search",
                       hintStyle: TextStyle(color: Colors.black45)
@@ -127,7 +127,7 @@ class _SearchPageState extends State<SearchPage> {
                 stream: FirebaseFirestore.instance.collection("products").snapshots(),
                 builder: (context, snapshot) {
                   return (snapshot.connectionState == ConnectionState.waiting)?
-                  Center(
+                  const Center(
                     child: CircularProgressIndicator(),
                   ):
                   ListView.builder(
@@ -135,7 +135,7 @@ class _SearchPageState extends State<SearchPage> {
                     itemBuilder: (context, index) {
                       var data = snapshot.data!.docs[index].data() as Map<String, dynamic>;
                       if (searchStart.isEmpty) {
-                        return SizedBox();
+                        return const SizedBox();
                       }
                       String name=data['name'];
                       if (
@@ -145,37 +145,36 @@ class _SearchPageState extends State<SearchPage> {
                       ) {
                         return InkWell(
                           onTap: () {
-                            print(data);
                             Navigator.push(context, CupertinoPageRoute(builder: (context) => UpdatePage(product: Product.fromJson(data)),));
                           },
                           child: Container(
                             width: double.infinity,
                             height: 40,
-                            margin: EdgeInsets.only(bottom: 15),
-                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            margin: const EdgeInsets.only(bottom: 15),
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
                             child: Row(
                               children: [
                                 Container(
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
                                       color: Colors.white,
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(color: Colors.grey,offset: Offset(0,2),blurRadius: 2),
                                         BoxShadow(color: Colors.grey,offset: Offset(0,-1),blurRadius: 1),
                                       ]
                                   ),
                                   clipBehavior: Clip.hardEdge,
                                   child: CachedNetworkImage(
-                                    errorWidget: (context, url, error) => Center(child: Icon(Icons.highlight_remove,color: Colors.red,),),
+                                    errorWidget: (context, url, error) => const Center(child: Icon(Icons.highlight_remove,color: Colors.red,),),
                                     height: 60,
                                     width: 70,
                                     fit: BoxFit.cover,
                                     imageUrl: data['imgUrls'][0],
                                   ),
                                 ),
-                                SizedBox(width: 10,),
+                                const SizedBox(width: 10,),
                                 Expanded(
-                                  child: Text(name,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w400,),),
+                                  child: Text(name,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w400,),),
                                 )
                               ],
                             ),
@@ -183,7 +182,7 @@ class _SearchPageState extends State<SearchPage> {
                         );
                       }
 
-                      return SizedBox();
+                      return const SizedBox();
                     },
                   );
                 },

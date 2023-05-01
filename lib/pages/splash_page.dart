@@ -15,10 +15,10 @@ class _SplashPageState extends State<SplashPage> {
 
 
   void isSignUser() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     bool isLogged=AuthService.currentUser();
     if (!isLogged || isLogged==null) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SignInPage(),));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignInPage(),));
     }
     else {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(),));
@@ -37,7 +37,7 @@ class _SplashPageState extends State<SplashPage> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.bottomLeft,
             end: Alignment.topRight,
@@ -51,12 +51,12 @@ class _SplashPageState extends State<SplashPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
+              const Expanded(
                 child: Center(
                   child: Text("Zara Shop",style: TextStyle(color: Colors.white,fontFamily: "Billabong",fontSize: 45),)
                 )
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(10),
                 child: Text("Loading...",style: TextStyle(color: Colors.white),)
               )

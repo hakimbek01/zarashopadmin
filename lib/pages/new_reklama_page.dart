@@ -34,14 +34,14 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
         Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
-            iconTheme: IconThemeData(
+            iconTheme: const IconThemeData(
                 color: Colors.black
             ),
-            title: Text("Reklama"),
+            title: const Text("Reklama"),
             actions: [
               IconButton(
                 onPressed: openGallery,
-                icon: Icon(CupertinoIcons.photo),
+                icon: const Icon(CupertinoIcons.photo),
                 color: Colors.black54,
               )
             ],
@@ -54,9 +54,9 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                     width: double.infinity,
                     decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30)),
+                        borderRadius: const BorderRadius.only(bottomRight: Radius.circular(30),bottomLeft: Radius.circular(30)),
                         boxShadow: [
-                          BoxShadow(color: Colors.grey.withOpacity(.4),offset: Offset(0,3),blurRadius: 5)
+                          BoxShadow(color: Colors.grey.withOpacity(.4),offset: const Offset(0,3),blurRadius: 5)
                         ]
                     ),
                     clipBehavior: Clip.hardEdge,
@@ -80,7 +80,7 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                             Align(
                               alignment: Alignment.topRight,
                               child: Padding(
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 child: CircleAvatar(
                                   backgroundColor: Colors.white.withOpacity(.6),
                                   radius: 20,
@@ -90,7 +90,7 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                                         images.remove(images[index]);
                                       });
                                     },
-                                    icon: Icon(CupertinoIcons.delete,color: Colors.red,),
+                                    icon: const Icon(CupertinoIcons.delete,color: Colors.red,),
                                   ),
                                 ),
                               ),
@@ -99,7 +99,7 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                             Align(
                               alignment: Alignment.bottomLeft,
                               child: Padding(
-                                  padding: EdgeInsets.all(15),
+                                  padding: const EdgeInsets.all(15),
                                   child: GestureDetector(
                                     onTap: () {
                                       setState(() {
@@ -109,7 +109,7 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                                     child: CircleAvatar(
                                       radius: 17,
                                       backgroundColor: Colors.white.withOpacity(.7),
-                                      child: Icon(CupertinoIcons.checkmark_seal_fill,color: Colors.lightBlue,),
+                                      child: const Icon(CupertinoIcons.checkmark_seal_fill,color: Colors.lightBlue,),
                                     ),
                                   )
                               ),
@@ -144,7 +144,7 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                                 },
                                 child: Container(
                                   height: 40,
-                                  padding: EdgeInsets.symmetric(horizontal: 10),
+                                  padding: const EdgeInsets.symmetric(horizontal: 10),
                                   width: 180,
                                   decoration: BoxDecoration(
                                       color: Colors.black54,
@@ -152,7 +152,7 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
+                                    children: const [
                                       Icon(CupertinoIcons.link,color: Colors.white,),
                                       SizedBox(width: 10,),
                                       Text("Havola qo'shish",style: TextStyle(color: Colors.white),)
@@ -168,7 +168,7 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                     Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Image(
                               height: 200,
                               image: AssetImage("assets/images/reklamabaner.png"),
@@ -179,23 +179,23 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                         )
                     )
                 ),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 link.isNotEmpty?
                 Container(
                   height: 50,
-                  margin: EdgeInsets.symmetric(horizontal: 20),
-                  padding: EdgeInsets.symmetric(horizontal: 10,vertical: 7),
+                  margin: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 7),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
                       boxShadow: [
-                        BoxShadow(color: Colors.grey.withOpacity(.5),blurRadius: 4,offset: Offset(0,3))
+                        BoxShadow(color: Colors.grey.withOpacity(.5),blurRadius: 4,offset: const Offset(0,3))
                       ]
                   ),
                   child: Text("Link: $link"),
                 ):
-                SizedBox.shrink(),
-                SizedBox(height: 50,),
+                const SizedBox.shrink(),
+                const SizedBox(height: 50,),
                 MaterialButton(
                   height: 50,
                   minWidth: 150,
@@ -204,20 +204,20 @@ class _NewReklamaPageState extends State<NewReklamaPage> {
                   },
                   color: Colors.blue,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                  child: Icon(CupertinoIcons.rocket,color: Colors.white,size: 35,),
+                  child: const Icon(CupertinoIcons.rocket,color: Colors.white,size: 35,),
                 )
               ],
             ),
           ),
         ),
         isLoading?
-        Scaffold(
+        const Scaffold(
           backgroundColor: Colors.transparent,
           body: Center(
             child: CircularProgressIndicator(),
           ),
         ):
-        SizedBox()
+        const SizedBox()
       ],
     );
   }

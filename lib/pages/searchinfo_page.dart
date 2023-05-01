@@ -57,11 +57,11 @@ class _SearchInfoPageState extends State<SearchInfoPage> {
         Scaffold(
           backgroundColor: Colors.grey.shade100,
           appBar: AppBar(
-            iconTheme: IconThemeData(
+            iconTheme: const IconThemeData(
                 color: Colors.black
             ),
             backgroundColor: Colors.white,
-            title: Text(widget.categoryName!,style: TextStyle(fontFamily: "Aladin",color: Colors.black,fontSize: 20),),
+            title: Text(widget.categoryName!,style: const TextStyle(fontFamily: "Aladin",color: Colors.black,fontSize: 20),),
             actions: [
               IconButton(
                 onPressed: () async {
@@ -96,7 +96,7 @@ class _SearchInfoPageState extends State<SearchInfoPage> {
                     ).show();
                   }
                 },
-                icon: Icon(Icons.delete,color: Colors.red,),
+                icon: const Icon(Icons.delete,color: Colors.red,),
               )
             ],
           ),
@@ -107,13 +107,13 @@ class _SearchInfoPageState extends State<SearchInfoPage> {
           ),
         ),
         isLoading?
-        Scaffold(
+        const Scaffold(
           backgroundColor: Colors.transparent,
           body: Center(
             child: CircularProgressIndicator(),
           ),
         ):
-        SizedBox()
+        const SizedBox()
       ],
     );
   }
@@ -131,12 +131,12 @@ class _SearchInfoPageState extends State<SearchInfoPage> {
       child: Container(
         height: MediaQuery.of(context).size.width/5,
         width: double.infinity,
-        margin: EdgeInsets.only(right: 10,left: 10,bottom: 10),
+        margin: const EdgeInsets.only(right: 10,left: 10,bottom: 10),
         clipBehavior: Clip.hardEdge,
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(12),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(color: Colors.grey,blurRadius: 2.5,offset: Offset(0,1)),
               BoxShadow(color: Colors.grey,blurRadius: 1,offset: Offset(0,-.51)),
             ]
@@ -149,14 +149,14 @@ class _SearchInfoPageState extends State<SearchInfoPage> {
               height: MediaQuery.of(context).size.width/5,
               fit: BoxFit.cover,
               imageUrl: product.imgUrls![0],
-              placeholder: (context, url) => Center(child: CircularProgressIndicator(),),
-              errorWidget: (context, url, error) => Center(child: Icon(Icons.highlight_remove,color: Colors.red,),),
+              placeholder: (context, url) => const Center(child: CircularProgressIndicator(),),
+              errorWidget: (context, url, error) => const Center(child: Icon(Icons.highlight_remove,color: Colors.red,),),
               ):
             Image(
               height: MediaQuery.of(context).size.width/5,
               width: 80,
               fit: BoxFit.cover,
-              image: AssetImage("assets/images/placeholder.png"),
+              image: const AssetImage("assets/images/placeholder.png"),
             ),
 
             Expanded(
@@ -166,7 +166,7 @@ class _SearchInfoPageState extends State<SearchInfoPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(product.name!,style: TextStyle(fontSize: 15,fontStyle: FontStyle.italic),overflow: TextOverflow.ellipsis,),
+                    Text(product.name!,style: const TextStyle(fontSize: 15,fontStyle: FontStyle.italic),overflow: TextOverflow.ellipsis,),
                   ],
                 ),
               ),
@@ -175,7 +175,7 @@ class _SearchInfoPageState extends State<SearchInfoPage> {
         ),
       ),
     ):
-    SizedBox();
+    const SizedBox();
   }
 
 

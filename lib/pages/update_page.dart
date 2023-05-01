@@ -161,9 +161,8 @@ class _UpdatePageState extends State<UpdatePage> {
                                     ? Stack(
                                         children: [
                                           Image(
-                                            width: MediaQuery.of(context)
-                                                .size
-                                                .width,
+                                            height: MediaQuery.of(context).size.width,
+                                            width: MediaQuery.of(context).size.width,
                                             fit: BoxFit.cover,
                                             image: FileImage(newImages[index]),
                                           ),
@@ -261,7 +260,7 @@ class _UpdatePageState extends State<UpdatePage> {
                           topRight: Radius.circular(30),
                           topLeft: Radius.circular(30)),
                     boxShadow: [
-                      BoxShadow(color: Colors.grey,offset: Offset(0, -1),blurRadius: 2,)
+                      BoxShadow(color: Colors.grey.withOpacity(.5),offset: Offset(0, -2),blurRadius: 2,)
                     ]
                   ),
                   margin: EdgeInsets.only(

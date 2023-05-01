@@ -56,7 +56,7 @@ class _FeedPageState extends State<FeedPage> {
               children: [
                 //appBar
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 15),
+                  margin: const EdgeInsets.symmetric(horizontal: 15),
                   height: MediaQuery.of(context).size.width/5,
                   width: double.infinity,
                   child: Row(
@@ -66,16 +66,16 @@ class _FeedPageState extends State<FeedPage> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: Padding(
-                          padding: EdgeInsets.only(right: 10),
+                          padding: const EdgeInsets.only(right: 10),
                           child: GestureDetector(
                             onTap: () async {
-                              await Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(),));
+                              await Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfilePage(),));
                               loadAdmin();
                             },
                             child: CircleAvatar(
                               radius: 19,
                               backgroundColor: Colors.grey.shade200,
-                              child: Center(
+                              child: const Center(
                                 child: Icon(Icons.person,color: Colors.grey,),
                               ),
                             ),
@@ -87,8 +87,8 @@ class _FeedPageState extends State<FeedPage> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Salom! Admin",style: TextStyle(color: Colors.grey,fontSize: 11),),
-                            Text(name,style: TextStyle(color: Colors.black,fontSize: 14,fontStyle: FontStyle.italic,overflow: TextOverflow.ellipsis,),maxLines: 3,)
+                            const Text("Salom! Admin",style: TextStyle(color: Colors.grey,fontSize: 11),),
+                            Text(name,style: const TextStyle(color: Colors.black,fontSize: 14,fontStyle: FontStyle.italic,overflow: TextOverflow.ellipsis,),maxLines: 3,)
                           ],
                         ),
                       ),
@@ -99,7 +99,7 @@ class _FeedPageState extends State<FeedPage> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.purpleAccent.withOpacity(.5),
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                               begin: Alignment.bottomLeft,
                               end: Alignment.topRight,
                               colors: [
@@ -110,7 +110,7 @@ class _FeedPageState extends State<FeedPage> {
                         ),
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => StatistikInfoPage(),));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const StatistikInfoPage(),));
                           },
                           child: const Center(
                             //chart pie
@@ -121,52 +121,52 @@ class _FeedPageState extends State<FeedPage> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 //search
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, CupertinoPageRoute(builder: (context) => SearchPage(types: true),));
+                    Navigator.push(context, CupertinoPageRoute(builder: (context) => const SearchPage(types: true),));
                   },
                   child: Container(
                     width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: 25),
+                    margin: const EdgeInsets.symmetric(horizontal: 25),
                     height: 45,
-                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(15),
                         boxShadow: [
-                          BoxShadow(color: Colors.grey.withOpacity(.25),offset: Offset(0,1),blurRadius: 4)
+                          BoxShadow(color: Colors.grey.withOpacity(.25),offset: const Offset(0,1),blurRadius: 4)
                         ]
                     ),
-                    child: Align(
+                    child: const Align(
                       alignment: Alignment.centerLeft,
                       child: Icon(CupertinoIcons.search,color: Colors.grey,),
                     ),
                   ),
                 ),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 //reklama
                 GestureDetector(
                   onTap: () async {
-                    await Navigator.push(context, MaterialPageRoute(builder: (context) => ReklamaBelgilashPage()));
+                    await Navigator.push(context, MaterialPageRoute(builder: (context) => const ReklamaBelgilashPage()));
                     getReklama();
                   },
                   child: Container(
                     width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: 25),
+                    margin: const EdgeInsets.symmetric(horizontal: 25),
                     clipBehavior: Clip.hardEdge,
                     height: 170,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(30),
                       boxShadow: [
-                        BoxShadow(color: Colors.grey.withOpacity(.3),offset: Offset(0,2),blurRadius: 2),
-                        BoxShadow(color: Colors.grey.withOpacity(.3),offset: Offset(0,-0.67),blurRadius: 1),
+                        BoxShadow(color: Colors.grey.withOpacity(.3),offset: const Offset(0,2),blurRadius: 2),
+                        BoxShadow(color: Colors.grey.withOpacity(.3),offset: const Offset(0,-0.67),blurRadius: 1),
                       ]
                     ),
                     child: reklama.reklama!.isEmpty?
-                    Center(
+                    const Center(
                       child: Icon(CupertinoIcons.arrow_2_circlepath_circle,size: 35,),
                     ):
                     Swiper(
@@ -176,18 +176,18 @@ class _FeedPageState extends State<FeedPage> {
                           placeholder: (context, url) => Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const CircularProgressIndicator(),
-                                const Text("Yuklnamoqda...",style: TextStyle(fontSize: 12),)
+                              children: const [
+                                CircularProgressIndicator(),
+                                Text("Yuklnamoqda...",style: TextStyle(fontSize: 12),)
                               ],
                             ),
                           ),
                           errorWidget: (context, url, error) => Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Icon(Icons.highlight_remove,color: Colors.red,),
-                                const Text("Xatolik yuz berdi!",style: TextStyle(fontSize: 12),)
+                              children: const [
+                                Icon(Icons.highlight_remove,color: Colors.red,),
+                                Text("Xatolik yuz berdi!",style: TextStyle(fontSize: 12),)
                               ],
                             ),
                           ),
@@ -198,7 +198,7 @@ class _FeedPageState extends State<FeedPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
               ],
             ),
           ),

@@ -35,10 +35,10 @@ class _OrdersDataPageState extends State<OrdersDataPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.black,
         ),
-        title: Text("Hammasi o'z qo'lingda",style: TextStyle(color: Colors.black),),
+        title: const Text("Hammasi o'z qo'lingda",style: TextStyle(color: Colors.black),),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -71,10 +71,13 @@ class _OrdersDataPageState extends State<OrdersDataPage> {
                     child: Container(
                       margin: EdgeInsets.only(top: MediaQuery.of(context).size.width-80,),
                       width: double.infinity,
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                           color: Colors.grey.shade100,
-                          borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
+                          boxShadow: [
+                            BoxShadow(color: Colors.grey.withOpacity(.4),offset: Offset(0, -2),blurRadius: 1)
+                          ],
+                          borderRadius: const BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -82,12 +85,12 @@ class _OrdersDataPageState extends State<OrdersDataPage> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(orders!.phoneNumber!,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
+                              Text(orders!.phoneNumber!,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
                               TextButton(
                                 onPressed: () {
                                   callNumber(orders!.phoneNumber!);
                                 },
-                                child: Text("Aloqaga chiqish",style: TextStyle(color: Colors.green)),
+                                child: const Text("Aloqaga chiqish",style: TextStyle(color: Colors.green)),
                               )
                             ],
                           ),
@@ -98,16 +101,16 @@ class _OrdersDataPageState extends State<OrdersDataPage> {
                             onPressed: () {
                               Navigator.push(context, MaterialPageRoute(builder: (context) => ImagePage(url: orders!.checkImage),));
                             },
-                            child: Text("Chekni ko'rish",style: TextStyle(color: Colors.white),),
+                            child: const Text("Chekni ko'rish",style: TextStyle(color: Colors.white),),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Column(
                                 children: [
-                                  SizedBox(height: 10,),
-                                  Text("O'lcham",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                                  SizedBox(height: 10,),
+                                  const SizedBox(height: 10,),
+                                  const Text("O'lcham",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                                  const SizedBox(height: 10,),
                                   Container(
                                     height: 50,
                                     width: 90,
@@ -115,20 +118,20 @@ class _OrdersDataPageState extends State<OrdersDataPage> {
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(20),
                                         boxShadow: [
-                                          BoxShadow(color: Colors.grey.withOpacity(.6),blurRadius: 2,offset: Offset(0,0))
+                                          BoxShadow(color: Colors.grey.withOpacity(.6),blurRadius: 2,offset: const Offset(0,0))
                                         ]
                                     ),
                                     child: Center(
-                                      child:Text(orders!.products![index]['size'],style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                                      child:Text(orders!.products![index]['size'],style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
                                     ),
                                   ),
                                 ],
                               ),
                               Column(
                                 children: [
-                                  SizedBox(height: 10,),
-                                  Text("Soni",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                                  SizedBox(height: 10,),
+                                  const SizedBox(height: 10,),
+                                  const Text("Soni",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                                  const SizedBox(height: 10,),
                                   Container(
                                     height: 50,
                                     width: 90,
@@ -136,35 +139,35 @@ class _OrdersDataPageState extends State<OrdersDataPage> {
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(20),
                                         boxShadow: [
-                                          BoxShadow(color: Colors.grey.withOpacity(.6),blurRadius: 2,offset: Offset(0,0))
+                                          BoxShadow(color: Colors.grey.withOpacity(.6),blurRadius: 2,offset: const Offset(0,0))
                                         ]
                                     ),
                                     child: Center(
-                                      child:Text(orders!.products![index]['count'],style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                                      child:Text(orders!.products![index]['count'],style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
                                     ),
                                   ),
                                 ],
                               ),
                             ],
                           ),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 10,),
                           Text(orders!.comment!),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 10,),
                           Row(
                             children: [
-                              Text("Joylashuv: ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
-                              Text(orders!.location!,style: TextStyle(fontStyle: FontStyle.italic,fontSize: 15),)
+                              const Text("Joylashuv: ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                              Text(orders!.location!,style: const TextStyle(fontStyle: FontStyle.italic,fontSize: 15),)
                             ],
                           ),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text("Narx: ",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
+                              const Text("Narx: ",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                               Text(orders!.totalPrice!)
                             ],
                           ),
-                          SizedBox(height: 20,),
+                          const SizedBox(height: 20,),
                           MaterialButton(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                             minWidth: double.infinity,
@@ -180,21 +183,21 @@ class _OrdersDataPageState extends State<OrdersDataPage> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("Buyurtma yo'lda",style: TextStyle(color: Colors.white),),
-                                SizedBox(width: 10,),
+                                const Text("Buyurtma yo'lda",style: TextStyle(color: Colors.white),),
+                                const SizedBox(width: 10,),
                                 loadingAccept?
-                                CupertinoActivityIndicator(color: Colors.white,):
-                                SizedBox()
+                                const CupertinoActivityIndicator(color: Colors.white,):
+                                const SizedBox()
                               ],
                             ):
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("Buyurtmani qabul qilish",style: TextStyle(color: Colors.white),),
-                                SizedBox(width: 10,),
+                                const Text("Buyurtmani qabul qilish",style: TextStyle(color: Colors.white),),
+                                const SizedBox(width: 10,),
                                 loadingAccept?
-                                CupertinoActivityIndicator(color: Colors.white,):
-                                SizedBox()
+                                const CupertinoActivityIndicator(color: Colors.white,):
+                                const SizedBox()
                               ],
                             )
                           ),

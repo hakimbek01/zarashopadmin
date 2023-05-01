@@ -22,10 +22,10 @@ class _ImagePageState extends State<ImagePage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.white
         ),
-        title: Text("Rasmni ko'rish",style: TextStyle(color: Colors.white)),
+        title: const Text("Rasmni ko'rish",style: TextStyle(color: Colors.white)),
         actions: [
           IconButton(
             onPressed: () {
@@ -33,7 +33,7 @@ class _ImagePageState extends State<ImagePage> {
                 fullScreen = !fullScreen;
               });
             },
-            icon: fullScreen?Icon(CupertinoIcons.fullscreen_exit):Icon(CupertinoIcons.fullscreen,),
+            icon: fullScreen?const Icon(CupertinoIcons.fullscreen_exit):const Icon(CupertinoIcons.fullscreen,),
           )
         ],
       ),
@@ -45,12 +45,12 @@ class _ImagePageState extends State<ImagePage> {
           height: MediaQuery.of(context).size.height,
           child: CachedNetworkImage(
             fit: BoxFit.cover,
-            progressIndicatorBuilder: (context, url, progress) => Center(child: CircularProgressIndicator(color: Colors.white,),),
+            progressIndicatorBuilder: (context, url, progress) => const Center(child: CircularProgressIndicator(color: Colors.white,),),
             imageUrl: widget.url!,
           ),
         ):
         CachedNetworkImage(
-          progressIndicatorBuilder: (context, url, progress) => Center(child: CircularProgressIndicator(color: Colors.white,),),
+          progressIndicatorBuilder: (context, url, progress) => const Center(child: CircularProgressIndicator(color: Colors.white,),),
           imageUrl: widget.url!,
         ):
         fullScreen?

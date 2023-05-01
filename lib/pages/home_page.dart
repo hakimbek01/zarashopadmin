@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
         backgroundColor: Colors.white.withOpacity(.3),
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.home),label: "Home"),
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.search),label: "Search"),
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.add_circled),label: "",),
@@ -36,17 +36,17 @@ class _HomePageState extends State<HomePage> {
       tabBuilder: (context, index) {
         switch(index) {
           case 0:
-            return FeedPage();
+            return const FeedPage();
           case 1:
-            return SearchPage(types: false,);
+            return const SearchPage(types: false,);
           case 2:
-            return CreatePage();
+            return const CreatePage();
           case 3:
-            return ProductsPage();
+            return const ProductsPage();
           case 4:
-            return OrdersPage();
+            return const OrdersPage();
         }
-        return SizedBox();
+        return const SizedBox();
       },
     );
   }
@@ -54,14 +54,14 @@ class _HomePageState extends State<HomePage> {
   Widget a(context,) {
     return Scaffold(
       body: PageView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: (value) {
           setState(() {
             _selectedIndex=value;
           });
         },
-        children: [
+        children: const [
           FeedPage(),
           ProductsPage(),
           OrdersPage(),
@@ -71,10 +71,10 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: SafeArea(
         child: Container(
           height: 50,
-          margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-          padding: EdgeInsets.all(7),
+          margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+          padding: const EdgeInsets.all(7),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(15)),
+              borderRadius: const BorderRadius.all(Radius.circular(15)),
               color: Colors.blueGrey.shade900
           ),
           child: Row(
@@ -92,16 +92,16 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(10)
                       ),
                     )
-                        :SizedBox(),
-                    SizedBox(height: 3,),
+                        :const SizedBox(),
+                    const SizedBox(height: 3,),
                     GestureDetector(
                       onTap: (){
                         setState(() {
                           _selectedIndex=0;
-                          _pageController.animateToPage(_selectedIndex, duration: Duration(milliseconds: 100), curve: Curves.easeIn);
+                          _pageController.animateToPage(_selectedIndex, duration: const Duration(milliseconds: 100), curve: Curves.easeIn);
                         });
                       },
-                      child: Icon(Icons.home,color: Colors.white,),
+                      child: const Icon(Icons.home,color: Colors.white,),
                     ),
                   ],
                 ),
@@ -118,16 +118,16 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(10)
                       ),
                     )
-                        :SizedBox(),
-                    SizedBox(height: 3,),
+                        :const SizedBox(),
+                    const SizedBox(height: 3,),
                     GestureDetector(
                       onTap: (){
                         setState(() {
                           _selectedIndex=1;
-                          _pageController.animateToPage(_selectedIndex, duration: Duration(milliseconds: 100), curve: Curves.easeIn);
+                          _pageController.animateToPage(_selectedIndex, duration: const Duration(milliseconds: 100), curve: Curves.easeIn);
                         });
                       },
-                      child: Icon(Icons.card_travel,color: Colors.white,),
+                      child: const Icon(Icons.card_travel,color: Colors.white,),
                     ),
                   ],
                 ),
@@ -144,16 +144,16 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(10)
                       ),
                     )
-                        :SizedBox(),
-                    SizedBox(height: 3,),
+                        :const SizedBox(),
+                    const SizedBox(height: 3,),
                     GestureDetector(
                       onTap: (){
                         setState(() {
                           _selectedIndex=2;
-                          _pageController.animateToPage(_selectedIndex, duration: Duration(milliseconds: 100), curve: Curves.easeIn);
+                          _pageController.animateToPage(_selectedIndex, duration: const Duration(milliseconds: 100), curve: Curves.easeIn);
                         });
                       },
-                      child: Icon(CupertinoIcons.arrow_down_right_square_fill,color: Colors.white,),
+                      child: const Icon(CupertinoIcons.arrow_down_right_square_fill,color: Colors.white,),
                     ),
                   ],
                 ),

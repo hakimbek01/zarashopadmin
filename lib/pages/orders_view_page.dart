@@ -23,7 +23,7 @@ class _OrdersPageState extends State<OrdersPage> {
           stream: FirebaseFirestore.instance.collection("orders").snapshots(),
           builder: (context, snapshot) {
             return (snapshot.connectionState == ConnectionState.waiting)?
-            Center(
+            const Center(
               child: CircularProgressIndicator(),
             ):
             itemOfOrders(snapshot);
@@ -47,18 +47,18 @@ class _OrdersPageState extends State<OrdersPage> {
               Container(
                 height: 70,
                 width: double.infinity,
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           radius: 24,
                           foregroundImage: AssetImage("assets/images/user.png"),
                         ),
-                        SizedBox(width: 10,),
-                        Text(malumot['totalPrice']+" UZS",style: TextStyle(fontWeight: FontWeight.bold),),
+                        const SizedBox(width: 10,),
+                        Text(malumot['totalPrice']+" UZS",style: const TextStyle(fontWeight: FontWeight.bold),),
                       ],
                     ),
                     MaterialButton(
@@ -67,7 +67,7 @@ class _OrdersPageState extends State<OrdersPage> {
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => OrdersDataPage(orders: orders),));
                       },
-                      child: Text("Ko'rish",style: TextStyle(color: Colors.white),),
+                      child: const Text("Ko'rish",style: TextStyle(color: Colors.white),),
                     ),
                     Text(malumot['products'][0]['count']+" ta"),
                   ],
@@ -81,18 +81,18 @@ class _OrdersPageState extends State<OrdersPage> {
                   child: Container(
                     height: 70,
                     width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    margin: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               radius: 24,
                               foregroundImage: AssetImage("assets/images/user.png"),
                             ),
-                            SizedBox(width: 10,),
-                            Text(malumot['totalPrice']+" UZS",style: TextStyle(fontWeight: FontWeight.bold),),
+                            const SizedBox(width: 10,),
+                            Text(malumot['totalPrice']+" UZS",style: const TextStyle(fontWeight: FontWeight.bold),),
                           ],
                         ),
                         MaterialButton(
@@ -101,7 +101,7 @@ class _OrdersPageState extends State<OrdersPage> {
                           onPressed: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => OrdersDataPage(orders: orders),));
                           },
-                          child: Text("Ko'rish",style: TextStyle(color: Colors.white),),
+                          child: const Text("Ko'rish",style: TextStyle(color: Colors.white),),
                         ),
                         Text(malumot['products'][0]['count']+" ta"),
                       ],
@@ -113,7 +113,7 @@ class _OrdersPageState extends State<OrdersPage> {
             ],
           );
         }
-        return Center(
+        return const Center(
           child: Text("Hozircha burtmalar yo'q."),
         );
       },
