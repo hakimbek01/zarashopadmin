@@ -233,7 +233,7 @@ class _ProductsPageState extends State<ProductsPage> {
     );
   }
 
-  ///spfd
+
   Widget itemOfProduct(Product product) {
     removeVisiable==false?
     product.removeVisible=false:true;
