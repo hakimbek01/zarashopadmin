@@ -1,3 +1,5 @@
+import 'dart:isolate';
+
 import 'package:cloud_firestore/cloud_firestore.dart' hide Query;
 import 'package:firebase_database/firebase_database.dart';
 import 'package:zarashopadmin/service/store_service.dart';
@@ -72,7 +74,12 @@ class DataService {
     }
 
     if (docs.isEmpty) {
-      docs = await getFirstTenDocuments();
+      final resivePort = ReceivePort();
+      await Isolate.spawn(getFirstTenDocuments,resivePort.sendPort);
+      resivePort.listen((message) {
+        docs = message;
+      });
+      /// docs = await getFirstTenDocuments();
       for (var a in docs) {
         p.add(Product.fromJson(a.data()));
       }
@@ -92,11 +99,20 @@ class DataService {
   static int limit=20;
   static int productsCount = 0;
 
-  static Future<List<QueryDocumentSnapshot<Map<String, dynamic>>>> getFirstTenDocuments() async {
+  static Future<List<QueryDocumentSnapshot<Map<String, dynamic>>>> getFirstTenDocuments1() async {
     var docs = await _firestore.collection(folderProduct).get();
     productsCount = docs.size;
     var querySnapshot = await _firestore.collection(folderProduct).orderBy("name").limit(limit).get();
     return querySnapshot.docs;
+  }
+
+  static Future<void> getFirstTenDocuments(SendPort sendPort) async {
+    var docs = await _firestore.collection(folderProduct).get();
+    productsCount = docs.size;
+    var querySnapshot = await _firestore.collection(folderProduct).orderBy("name").limit(limit).get();
+    sendPort.send(querySnapshot.docs);
+    sendPort.send(querySnapshot.docs);
+    // return querySnapshot.docs;
   }
 
   static Future<List<QueryDocumentSnapshot<Map<String, dynamic>>>> getNextTenDocuments(DocumentSnapshot lastDocument) async {
