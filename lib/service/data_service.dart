@@ -74,12 +74,8 @@ class DataService {
     }
 
     if (docs.isEmpty) {
-      final resivePort = ReceivePort();
-      await Isolate.spawn(getFirstTenDocuments,resivePort.sendPort);
-      resivePort.listen((message) {
-        docs = message;
-      });
-      /// docs = await getFirstTenDocuments();
+      await getFirstTenDocuments();
+      docs = await getFirstTenDocuments();
       for (var a in docs) {
         p.add(Product.fromJson(a.data()));
       }
@@ -106,13 +102,11 @@ class DataService {
     return querySnapshot.docs;
   }
 
-  static Future<void> getFirstTenDocuments(SendPort sendPort) async {
+  static Future<List<QueryDocumentSnapshot<Map<String, dynamic>>>> getFirstTenDocuments() async {
     var docs = await _firestore.collection(folderProduct).get();
     productsCount = docs.size;
     var querySnapshot = await _firestore.collection(folderProduct).orderBy("name").limit(limit).get();
-    sendPort.send(querySnapshot.docs);
-    sendPort.send(querySnapshot.docs);
-    // return querySnapshot.docs;
+    return querySnapshot.docs;
   }
 
   static Future<List<QueryDocumentSnapshot<Map<String, dynamic>>>> getNextTenDocuments(DocumentSnapshot lastDocument) async {
@@ -149,7 +143,7 @@ class DataService {
     var docs= await _firestore.collection(folderProduct).get();
     for (var a in docs.docs) {
       Product product = Product.fromJson(a.data());
-      
+
     }
     return p;
   }

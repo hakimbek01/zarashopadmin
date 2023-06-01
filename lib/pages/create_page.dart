@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:zarashopadmin/pages/home_page.dart';
 import 'package:zarashopadmin/pages/select_types.dart';
 
 import '../model/admin_model.dart';
@@ -22,13 +23,13 @@ class CreatePage extends StatefulWidget {
 }
 
 class _CreatePageState extends State<CreatePage> {
-  final TextEditingController _name=TextEditingController();
 
+  final TextEditingController _name=TextEditingController();
   final TextEditingController _content=TextEditingController();
   final TextEditingController _createCategory=TextEditingController();
 
   String _category="Category tanlash";
-  final List<Map<String, dynamic>> _imagesList=[];
+  List<Map<String, dynamic>> _imagesList=[];
   bool isLoading=false;
   List _imgURL = [];
   final ImagePicker _imagePicker=ImagePicker();
@@ -37,15 +38,6 @@ class _CreatePageState extends State<CreatePage> {
   List<PopupMenuEntry<dynamic>> popupMenuItem = [];
   List categories = [];
 
-
-  @override
-  void dispose() {
-    _name.dispose();
-    _content.dispose();
-    _createCategory.dispose();
-
-    super.dispose();
-  }
 
   void createPopupMenu() {
     popupMenuItem = [];
@@ -111,6 +103,23 @@ class _CreatePageState extends State<CreatePage> {
   void initState() {
     getCategory();
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    setState(() {
+      _category="Category tanlash";
+      _imagesList=[];
+      isLoading=false;
+      _imgURL = [];
+      typePrice=true;
+      popupMenuItem = [];
+      categories = [];
+      _name.dispose();
+      _content.dispose();
+      _createCategory.dispose();
+    });
+    super.dispose();
   }
 
   @override
@@ -412,8 +421,20 @@ class _CreatePageState extends State<CreatePage> {
       setState(() {
         isLoading=false;
       }),
-      Navigator.pop(context,true),
+      setState(() {
+        _name.clear();
+        _content.clear();
+        _createCategory.clear();
+        _category="Category tanlash";
+        _imagesList=[];
+        isLoading=false;
+        _imgURL = [];
+        typePrice=true;
+        popupMenuItem = [];
+        categories = [];
+      })
     });
+    getCategory();
   }
 
   void addMyProduct(String id) async {
