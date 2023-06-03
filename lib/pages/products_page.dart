@@ -23,877 +23,13 @@ class ProductsPage extends StatefulWidget {
 
 class _ProductsPageState extends State<ProductsPage> {
 
-  List<Product> items=[
-    Product(
-      types: [
-        {
-          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-          "types": [
-            {
-              "price": "287",
-              "size":"21873"
-            }
-        ]
-        }
-      ],
-      imgUrls: [
-        "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-      ],
-      id: "8uzEMVtbq1zfWO5VHne2",
-      buyCount: 2,
-      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-      name: "Sale",
-      category: "Multik",
-      date: "713123712389",
-      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-      isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-    Product(
-        types: [
-          {
-            "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-            "types": [
-              {
-                "price": "287",
-                "size":"21873"
-              }
-            ]
-          }
-        ],
-        imgUrls: [
-          "https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-        ],
-        id: "8uzEMVtbq1zfWO5VHne2",
-        buyCount: 2,
-        productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-        name: "Sale",
-        category: "Multik",
-        date: "713123712389",
-        content: "woeuuifhewifiwefhoIEWFHewoiuf",
-        isAvailable: true
-    ),
-  ];
+  List<Product> items=[];
 
   String appBarTitle="Mahsulotlar";
   bool isSeries=true;
   bool visiableProduct=true;
   bool remove=false;
+  bool removeVisiable = false;
   bool delCategory = false;
   bool delVisiable=false;
   int delProductCount=0;
@@ -903,8 +39,7 @@ class _ProductsPageState extends State<ProductsPage> {
 
   @override
   void initState() {
-    // getCategory();
-    // getProducts(false);
+    getProducts(false);
     super.initState();
   }
 
@@ -922,39 +57,39 @@ class _ProductsPageState extends State<ProductsPage> {
             backgroundColor: delVisiable? Colors.grey.shade300: Colors.white,
             title: delVisiable?
             Text(delProductCount.toString(),style: const TextStyle(color: Colors.black54),):
-            Row(
-              children: [
-                PopupMenuButton(
-                  child: Text(appBarTitle,style: const TextStyle(color: Colors.black),),
-                  itemBuilder: (context) {
-                    return [
-                      PopupMenuItem(
-                        child: const Text("Mahsulotlar"),
-                        onTap: (){
-                          setState(() {
-                            appBarTitle="Mahsulotlar";
-                            visiableProduct=true;
-                            isSeries=true;
-                          });
-                          getProducts(false);
-                        },
-                      ),
-                      PopupMenuItem(
-                        child: const Text("Category"),
-                        onTap: (){
-                          setState(() {
-                            appBarTitle="Category";
-                            visiableProduct=false;
-                            isSeries=false;
-                          });
-                        },
-                      )
-                    ];
-                  },
-                ),
-                const SizedBox(width: 5,),
-                const Icon(CupertinoIcons.chevron_down,)
-              ],
+            PopupMenuButton(
+              child: Row(
+                children: [
+                  Text(appBarTitle,style: const TextStyle(color: Colors.black),),
+                  const SizedBox(width: 5,),
+                  const Icon(CupertinoIcons.chevron_down,)
+                ],
+              ),
+              itemBuilder: (context) {
+                return [
+                  PopupMenuItem(
+                    child: const Text("Mahsulotlar"),
+                    onTap: (){
+                      setState(() {
+                        appBarTitle="Mahsulotlar";
+                        visiableProduct=true;
+                        isSeries=true;
+                      });
+                      getProducts(false);
+                    },
+                  ),
+                  PopupMenuItem(
+                    child: const Text("Category"),
+                    onTap: (){
+                      setState(() {
+                        appBarTitle="Category";
+                        visiableProduct=false;
+                        isSeries=false;
+                      });
+                    },
+                  )
+                ];
+              },
             ),
             actions: [
               visiableProduct && !delVisiable?
@@ -1060,11 +195,11 @@ class _ProductsPageState extends State<ProductsPage> {
                           childAspectRatio: isSeries?2/2.7:5.5/1.8,
                           mainAxisSpacing: 10,
                           children: items.map((e) {
-                            /*removeVisiable==false?
+                            /*delVisiable==false?
                             e.removeVisible=false:true;
-                            return removeVisiable?
-                            itemRProduct(e):
-                            itemOfProduct(e);*/
+                            return delVisiable?
+                            itemDelProduct(e):
+                            itemOfProduct2(e);*/
                             return isSeries?
                             itemOfProduct2(e):
                             itemOfProduct1(e);
@@ -1075,491 +210,7 @@ class _ProductsPageState extends State<ProductsPage> {
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: MaterialButton(
                             onPressed: () {
-                              setState(() {
-                                items.addAll([
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                  Product(
-                                      types: [
-                                        {
-                                          "img":"https://www.wallpaperuse.com/wallp/14-149075_m.jpg",
-                                          "types": [
-                                            {
-                                              "price": "287",
-                                              "size":"21873"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      imgUrls: [
-                                        "https://firebasestorage.googleapis.com/v0/b/zara-shop-d7f04.appspot.com/o/post_image%2Fimage_2023-04-23%2017%3A37%3A36.439316?alt=media&token=d198a219-8f2c-4cec-8554-6a18a87b1606"
-                                      ],
-                                      id: "8uzEMVtbq1zfWO5VHne2",
-                                      buyCount: 2,
-                                      productOwner: "OMrRcFfEyBRyBiE8j9DFkMg0ESH3",
-                                      name: "New POst",
-                                      category: "Multik",
-                                      date: "713123712389",
-                                      content: "woeuuifhewifiwefhoIEWFHewoiuf",
-                                      isAvailable: true
-                                  ),
-                                ]);
-                              });
-                              // getProducts(false);
+                              getProducts(false);
                             },
                             height: 40,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -1790,6 +441,7 @@ class _ProductsPageState extends State<ProductsPage> {
     //     ),
     //   ),
     // ):
+    delVisiable == false?product.removeVisible = false:true;
     return InkWell(
       onLongPress: () {
         setState(() {
@@ -1797,12 +449,41 @@ class _ProductsPageState extends State<ProductsPage> {
         });
       },
       onTap: () async{
-        delCategory = await Navigator.push(context, CupertinoPageRoute(builder: (context) => UpdatePage(product: product),));
+
+        if (!delVisiable) {
+          delCategory = await Navigator.push(context, CupertinoPageRoute(builder: (context) => UpdatePage(product: product),));
+        }
+
+        product.removeVisible = !(product.removeVisible);
+
+        if (delVisiable) {
+          if (product.removeVisible) {
+            for (var a in product.imgUrls!) {
+              delUrlList.add(a);
+            }
+            delProductsId.add(product.id);
+            setState(() {
+              delProductCount=delProductsId.length;
+            });
+          } else {
+            setState(() {
+              for(var a in product.imgUrls!) {
+                delUrlList.remove(a);
+              }
+              delProductsId.remove(product.id);
+              delProductCount=delProductsId.length;
+            });
+          }
+        }
+
+        print(delProductsId);
       },
-      child:
-      // 2 qator  bo'lib chiqishi
-      Container(
-        color: Colors.white,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: product.removeVisible?Border.all(color: Colors.red,width: 2):Border.all(color: Colors.white),
+          borderRadius: BorderRadius.circular(20)
+        ),
         margin: const EdgeInsets.only(left: 10,right: 10,bottom: 5),
         width: double.infinity,
         child: Stack(
@@ -1816,17 +497,13 @@ class _ProductsPageState extends State<ProductsPage> {
                           borderRadius: BorderRadius.circular(20)
                       ),
                       child:  product.imgUrls!.isNotEmpty?
-                      Swiper(
-                        itemCount: product.imgUrls!.length,
-                        itemBuilder: (context, index) {
-                          return FadeInImage(
-                            fit: BoxFit.cover,
-                            image: CachedNetworkImageProvider(product.imgUrls![index]),
-                            placeholder: const AssetImage("assets/images/img_1.png"),
-                            fadeInDuration: const Duration(milliseconds: 100),
-                            fadeOutDuration: const Duration(milliseconds: 100),
-                          );
-                        },
+                      FadeInImage(
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                        image: CachedNetworkImageProvider(product.imgUrls![0]),
+                        placeholder: const AssetImage("assets/images/img_1.png"),
+                        fadeInDuration: const Duration(milliseconds: 100),
+                        fadeOutDuration: const Duration(milliseconds: 100),
                       ):
                       const Image(
                         image: AssetImage("assets/images/placeholder.png"),
@@ -1858,7 +535,7 @@ class _ProductsPageState extends State<ProductsPage> {
   }
 
   Widget itemOfProduct1(Product product) {
-    return InkWell(
+    return const SizedBox()/*InkWell(
       onLongPress: () {
         setState(() {
           delVisiable=true;
@@ -1952,20 +629,11 @@ class _ProductsPageState extends State<ProductsPage> {
           ],
         ),
       ),
-    );
-  }
-
-
-  Future<void> getProducts(bool first) async {
-    await DataService.getProduct(first: first).then((value) => {
-      setState((){
-        items = value;
-      }),
-    });
+    )*/;
   }
 
   Widget itemDelProduct(Product product) {
-    return InkWell(
+    return const SizedBox()/*InkWell(
       onTap: () async {
 
         product.removeVisible = !(product.removeVisible);
@@ -1989,7 +657,6 @@ class _ProductsPageState extends State<ProductsPage> {
             delProductsId.remove(product.id);
           });
         }
-
       },
       child: isSeries?
       Container(
@@ -2155,7 +822,15 @@ class _ProductsPageState extends State<ProductsPage> {
           ],
         ),
       ),
-    );
+    )*/;
+  }
+
+  Future<void> getProducts(bool first) async {
+    await DataService.getProduct(first: first).then((value) => {
+      setState((){
+        items = value;
+      }),
+    });
   }
 
   void cautionDialog(String id,List<dynamic> imgUrl) async {
